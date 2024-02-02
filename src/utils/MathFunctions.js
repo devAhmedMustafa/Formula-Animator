@@ -78,3 +78,8 @@ export function tanh(x){
 export function coth(x){
     return 1/Math.tanh(x);
 }
+
+export function evaluator(x, y){
+    if (x == undefined) x = 1;
+    return eval(y)
+}
