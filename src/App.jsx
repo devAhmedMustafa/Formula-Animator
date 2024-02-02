@@ -23,7 +23,7 @@ function App() {
     try{
       var n = eval(new_f)
       setError("")
-      console.log("Test")
+      console.log(n)
       return n;
     }
     catch(err){
