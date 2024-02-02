@@ -1,0 +1,10 @@
+
+
+.text_input{
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+.text_input:focus{
+  outline: none;
+}
