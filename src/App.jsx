@@ -19,11 +19,11 @@ function App() {
   const FormulaExtractor = (x)=>{
 
     var new_f = formula.replace("^","**");
+    console.log(eval(new_f))
 
     try{
       var n = eval(new_f)
       setError("")
-      console.log(n)
       return n;
     }
     catch(err){
