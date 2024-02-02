@@ -5,8 +5,12 @@ import logo from "@assets/STAR.png"
 import blender_logo from "@assets/blender.png"
 import blenderScript from './utils/BlenderTemplate'
 import { evaluator } from './utils/MathFunctions'
+import {Trig} from './utils/Trig'
+
 
 function App() {
+
+  for (let name of Object.getOwnPropertyNames(Trig))  globalThis[name] = Trig[name]
 
   const [formula, setFormula] = useState("x")
   const [shift, setShift] = useState(false)
@@ -76,13 +80,13 @@ function App() {
 
               <div className="flex flex-wrap items-center justify-center gap-2">
 
-                  <label for="form">Formula</label>
+                  <label htmlFor="form">Formula</label>
                   <input className='text_input w-full' type="text" id="form" value={formula} onChange={(e)=> setFormula(e.target.value)}/>
-                  <label for="speed">Speed</label>
+                  <label htmlFor="speed">Speed</label>
                   <input className='text_input w-28' id='speed' type="number" value={speed} onChange={(e)=>setSpeed(e.target.value)}/>
-                  <label for="scale">Scale</label>
+                  <label htmlFor="scale">Scale</label>
                   <input className='text_input w-28' id='scale' type="number" value={scale} onChange={(e)=>setScale(e.target.value)}/>
-                  <label for="frames">Frames</label>
+                  <label htmlFor="frames">Frames</label>
                   <input className="text_input w-28" id='frames' type='number' value={frames} onChange={(e)=>setFrames(e.target.value)} />
 
                   <button className='focus:outline-none button' onClick={()=> setShift(!shift)}>Set</button>
@@ -106,7 +110,7 @@ function App() {
               <div>
                 <button className='text-lg flex gap-4 items-center bg-[#2e2e2e] px-4 py-2 rounded-lg border-purple-500 hover:border-2' onClick={()=> navigator.clipboard.writeText(script)}>
                   <p>Blender Script</p>
-                  <i class="fa-regular fa-copy"></i>
+                  <i className="fa-regular fa-copy"></i>
                 </button>
                 
               </div>
