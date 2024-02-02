@@ -17,8 +17,6 @@ function App() {
   const [frames, setFrames] = useState(10)
 
   const FormulaExtractor = (x)=>{
-
-    console.log(x)
     var new_f = formula.replace("^","**");
     console.log(formula)
 
