@@ -16,9 +16,8 @@ function App() {
   const [script, setScript] = useState("")
   const [frames, setFrames] = useState(10)
 
-  const FormulaExtractor = (x)=>{
+  function FormulaExtractor(x){
     var new_f = formula.toLowerCase().replace("^","**");
-    console.log(formula)
 
     try{
       var n = evaluator(x, new_f)
