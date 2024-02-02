@@ -18,8 +18,9 @@ function App() {
 
   const FormulaExtractor = (x)=>{
 
+    console.log(x)
     var new_f = formula.replace("^","**");
-    console.log(eval(new_f))
+    console.log(formula)
 
     try{
       var n = eval(new_f)
