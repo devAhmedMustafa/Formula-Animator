@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import '@styles/App.css'
 import '@styles/grid.css'
+import {sin, cos, tan, sec, csc, cot, asin, acos, atan, asec, acsc, acot, sinh, cosh, tanh, sech, csch, coth} from "@utils/MathFunctions.js"
 import logo from "@assets/STAR.png"
 import blender_logo from "@assets/blender.png"
 import blenderScript from './utils/BlenderTemplate'
@@ -16,6 +17,7 @@ function App() {
   const [frames, setFrames] = useState(10)
 
   const FormulaExtractor = (x)=>{
+    console.log(x)
     var new_f = formula.replace("^","**");
     console.log(formula)
 
